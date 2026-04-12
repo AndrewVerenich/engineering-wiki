@@ -13,6 +13,9 @@
 
 Обе перспективы связаны с [Batch Processing](../concepts/batch-processing.md) (часто OLAP-данные наполняются пакетно) и [Derived Data and Systems](../concepts/derived-data-and-systems.md).
 
+Витрины и OLAP часто строятся по **dimensional modeling** (Kimball): [Dimensional Modeling (Kimball)](../concepts/dimensional-modeling-kimball.md).
+
 ## Связи
 
 - [Designing Data-Intensive Applications](../sources/designing-data-intensive-applications.md)
+- [The Data Warehouse Toolkit](../sources/the-data-warehouse-toolkit.md)

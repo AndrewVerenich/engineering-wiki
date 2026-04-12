@@ -3,8 +3,14 @@
 ## Sources
 
 - [Designing Data-Intensive Applications](sources/designing-data-intensive-applications.md)
+- [The Data Warehouse Toolkit](sources/the-data-warehouse-toolkit.md)
+- [ClickHouse Official Documentation](sources/clickhouse-official-documentation.md)
+- [Личный план изучения dbt](sources/dbt-learning-plan.md)
+- [Личный план изучения ClickHouse (через dbt)](sources/clickhouse-learning-plan.md)
 
 ## Concepts
+
+### DDIA
 
 - [Reliability, Scalability, Maintainability](concepts/reliability-scalability-maintainability.md)
 - [Data Models and Query Languages](concepts/data-models-and-query-languages.md)
@@ -19,6 +25,31 @@
 - [Stream Processing](concepts/stream-processing.md)
 - [Derived Data and Systems](concepts/derived-data-and-systems.md)
 
+### Dimensional modeling (Kimball)
+
+- [Dimensional Modeling (Kimball)](concepts/dimensional-modeling-kimball.md)
+- [Staging and Presentation Layers](concepts/staging-and-presentation-layers.md)
+- [Star Schema and Grain](concepts/star-schema-and-grain.md)
+- [Dimension Tables](concepts/dimension-tables.md)
+- [Fact Table Types (Kimball)](concepts/fact-table-types-kimball.md)
+- [Slowly Changing Dimensions](concepts/slowly-changing-dimensions.md)
+- [Conformed Dimensions](concepts/conformed-dimensions.md)
+- [Advanced Dimensional Patterns](concepts/advanced-dimensional-patterns.md)
+
+### Паттерны данных (инженерия)
+
+- [ClickHouse + Kafka Ingestion](concepts/clickhouse-kafka-ingestion.md)
+- [ClickHouse Schema Design Patterns](concepts/clickhouse-schema-design-patterns.md)
+- [ClickHouse Insert and Mutation Strategy](concepts/clickhouse-insert-and-mutation-strategy.md)
+- [ClickHouse Query Optimization Patterns](concepts/clickhouse-query-optimization-patterns.md)
+- [ClickHouse: индексы и background merges](concepts/clickhouse-indexes-and-background-merges.md)
+- [ClickHouse под капотом](concepts/clickhouse-under-the-hood.md)
+- [ClickHouse MergeTree Engines](concepts/clickhouse-merge-tree-engines.md)
+- [CDC: Debezium → Kafka → ClickHouse](concepts/cdc-debezium-analytics-pipeline.md)
+- [dbt: слои проекта](concepts/dbt-project-layers.md)
+- [dbt in Portfolio: Applied Patterns](concepts/dbt-portfolio-applied-patterns.md)
+- [Spark Batch + Medallion (HDFS)](concepts/spark-batch-medallion-hdfs.md)
+
 ## Entities
 
 - [PostgreSQL](entities/postgresql.md)
@@ -27,7 +58,12 @@
 ## Overviews
 
 - [Data Engineering Fundamentals](overviews/data-engineering-fundamentals.md)
+- [Dimensional Modeling Interview Prep](overviews/dimensional-modeling-interview-prep.md)
+- [dbt Learning Roadmap](overviews/dbt-learning-roadmap.md)
+- [ClickHouse Learning Track (dbt-oriented)](overviews/clickhouse-learning-track.md)
 
 ## Comparisons
 
 - [OLTP vs OLAP](comparisons/oltp-vs-olap.md)
+- [Kimball vs Inmon](comparisons/kimball-vs-inmon.md)
+- [ELT vs ETL (на практике)](comparisons/elt-vs-etl-practice.md)
