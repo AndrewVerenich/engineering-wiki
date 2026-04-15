@@ -5,12 +5,13 @@
 - [Designing Data-Intensive Applications](sources/designing-data-intensive-applications.md)
 - [The Data Warehouse Toolkit](sources/the-data-warehouse-toolkit.md)
 - [ClickHouse Official Documentation](sources/clickhouse-official-documentation.md)
-- [Личный план изучения dbt](sources/dbt-learning-plan.md)
-- [Личный план изучения ClickHouse (через dbt)](sources/clickhouse-learning-plan.md)
+- [PostgreSQL 17 изнутри](sources/postgresql-internals.md)
+- [SQL: The Complete Reference](sources/sql-complete-reference.md)
+- [Реляционные базы данных в примерах](sources/relational-databases-in-examples.md)
 
 ## Concepts
 
-### DDIA
+### Designing Data-Intensive Applications
 
 - [Reliability, Scalability, Maintainability](concepts/reliability-scalability-maintainability.md)
 - [Data Models and Query Languages](concepts/data-models-and-query-languages.md)
@@ -24,6 +25,7 @@
 - [Batch Processing](concepts/batch-processing.md)
 - [Stream Processing](concepts/stream-processing.md)
 - [Derived Data and Systems](concepts/derived-data-and-systems.md)
+- [OLTP vs OLAP](comparisons/oltp-vs-olap.md)
 
 ### Dimensional modeling (Kimball)
 
@@ -35,6 +37,15 @@
 - [Slowly Changing Dimensions](concepts/slowly-changing-dimensions.md)
 - [Conformed Dimensions](concepts/conformed-dimensions.md)
 - [Advanced Dimensional Patterns](concepts/advanced-dimensional-patterns.md)
+- [Kimball vs Inmon](comparisons/kimball-vs-inmon.md)
+
+### Реляционные базы данных
+
+- [Normalization and Normal Forms](concepts/normalization-and-normal-forms.md)
+- [SQL Query Execution and Indexes](concepts/sql-query-execution-and-indexes.md)
+- [SQL Transactions, Locking and Isolation](concepts/sql-transactions-locking-standard.md)
+- [PostgreSQL MVCC Internals](concepts/postgresql-mvcc-internals.md)
+- [PostgreSQL vs MySQL: MVCC](comparisons/postgresql-vs-mysql-mvcc.md)
 
 ### Паттерны данных (инженерия)
 
@@ -49,6 +60,7 @@
 - [dbt: слои проекта](concepts/dbt-project-layers.md)
 - [dbt in Portfolio: Applied Patterns](concepts/dbt-portfolio-applied-patterns.md)
 - [Spark Batch + Medallion (HDFS)](concepts/spark-batch-medallion-hdfs.md)
+- [ELT vs ETL (на практике)](comparisons/elt-vs-etl-practice.md)
 
 ## Entities
 
@@ -62,8 +74,3 @@
 - [dbt Learning Roadmap](overviews/dbt-learning-roadmap.md)
 - [ClickHouse Learning Track (dbt-oriented)](overviews/clickhouse-learning-track.md)
 
-## Comparisons
-
-- [OLTP vs OLAP](comparisons/oltp-vs-olap.md)
-- [Kimball vs Inmon](comparisons/kimball-vs-inmon.md)
-- [ELT vs ETL (на практике)](comparisons/elt-vs-etl-practice.md)

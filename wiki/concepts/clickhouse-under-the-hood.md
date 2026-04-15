@@ -71,6 +71,20 @@ Per `query-mv-refreshable`: для тяжелых prejoin/кэша — refreshab
 Per `schema-pk-plan-before-creation`: ключ нужно проектировать заранее — менять его потом дорого.  
 Per `schema-pk-prioritize-filters` и `schema-pk-cardinality-order`: если ключ не совпадает с фильтрами и кардинальностью, движок читает слишком много данных.
 
+## Типичные вопросы на интервью
+
+**Q: Почему ClickHouse быстрый для аналитики?**
+A: 1) **Columnar storage** — читаются только нужные колонки. 2) **Compression** — однородные данные в колонке сжимаются лучше (LZ4, ZSTD). 3) **Vectorized execution** — обработка блоками по ~8192 строк, SIMD-инструкции. 4) **Sparse index** — отсечение granules без per-row index overhead. 5) **Append-only model** — writes не конкурируют с reads.
+
+**Q: Объясни иерархию хранения: partition → part → granule.**
+A: **Partition** — логическая группа для lifecycle (TTL, DROP). **Part** — физический immutable файл(набор), создаётся на INSERT, содержит все колонки. **Granule** — минимальная единица чтения внутри part (~8192 строк). Primary index ссылается на granules, не на строки.
+
+**Q: Что происходит, когда ClickHouse выполняет SELECT?**
+A: 1) Анализ фильтров. 2) Partition pruning. 3) Primary index → отсечение granules. 4) Skipping indices (если есть). 5) Чтение только нужных колонок в оставшихся granules. 6) Filter/join/aggregate/sort. 7) Streaming результата клиенту. Ключ к производительности: сколько данных удалось **не читать**.
+
+**Q: Чем MV в ClickHouse отличается от MV в PostgreSQL?**
+A: В ClickHouse MV — это **insert-trigger**: срабатывает на новые строки, пишет результат в target-таблицу. Инкрементальный, стоимость O(batch). В PostgreSQL MV — **snapshot**: `REFRESH MATERIALIZED VIEW` пересчитывает весь запрос. ClickHouse MV дешевле для streaming, но не может пересмотреть историю без refreshable MV.
+
 ## Связи
 
 - [ClickHouse Schema Design Patterns](clickhouse-schema-design-patterns.md)

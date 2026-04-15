@@ -1,7 +1,5 @@
 # dbt in Portfolio: Applied Patterns
 
-**Источник:** [Личный план изучения dbt](../sources/dbt-learning-plan.md)
-
 Страница фиксирует, как roadmap dbt был применен в portfolio-пайплайнах на практике.
 
 ## 1) Layered architecture как стандарт
@@ -68,6 +66,17 @@
 1. почему слои в dbt = инженерная дисциплина, а не просто стиль;  
 2. как grain/surrogate keys влияют на корректность метрик;  
 3. как incremental + quality gates удерживают надежность при росте данных.
+
+## Типичные вопросы на интервью
+
+**Q: Как ты организовал dbt-проект на практике?**
+A: Четыре слоя: staging (1:1 с источником, dedup), intermediate (join'ы и бизнес-правила), core (facts + dimensions с surrogate keys), marts (domain-витрины). Запуск послойно по тегам с quality gate (`dbt test`) между слоями. Incremental facts с watermark для оптимизации.
+
+**Q: Как ты обеспечиваешь качество данных в dbt?**
+A: Generic tests (`not_null`, `unique`, `relationships`) на всех ключах и FK. Custom tests на domain-invariants. Freshness tests на источниках. Pipeline: «test before publish» — если tests fail, marts не обновляются. CI: slim/state-aware runs на PR.
+
+**Q: Почему surrogate keys, а не natural keys, в dbt-проекте?**
+A: 1) Стабильность join'ов при смене source PK. 2) Поддержка SCD Type 2 (каждая версия dimension — свой surrogate). 3) Integer join быстрее composite string. В dbt — макрос `surrogate_key` (обычно hash) для детерминированных ключей.
 
 ## Связи
 

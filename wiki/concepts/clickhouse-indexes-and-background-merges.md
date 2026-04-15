@@ -76,6 +76,20 @@ Per `insert-optimize-avoid-final`: в норме нужно доверять bac
 | Плохое pruning | Фильтры мимо `ORDER BY` | `EXPLAIN indexes = 1` |
 | Heavy I/O в фоне | Агрессивные мутации/оптимизации | UPDATE/DELETE/OPTIMIZE usage |
 
+## Типичные вопросы на интервью
+
+**Q: Что такое sparse index в ClickHouse и чем он отличается от B-tree?**
+A: Sparse index хранит ключи **по granule** (~8192 строк), а не по каждой строке. При чтении отсекаются целые блоки granules. Плюс: компактный индекс, быстрый для аналитики (scan-heavy). Минус: точечный lookup неточный (читает granule, а не строку). B-tree — per-row, точный, но дороже по памяти и поддержке.
+
+**Q: Что такое parts и почему их количество важно?**
+A: Каждый INSERT создаёт immutable **part** (набор файлов по колонкам). Много мелких parts → overhead на чтение (открыть/прочитать каждый) и на merge (background I/O). Мониторить: `SELECT count() FROM system.parts WHERE active AND table='...'`. Target: сотни-тысячи active parts, не десятки тысяч.
+
+**Q: Как работает background merge?**
+A: Фоновые потоки выбирают parts и сливают в более крупные: данные перезаписываются, правила движка применяются (дедуп в Replacing, сумма в Summing), старые parts удаляются. Это **eventual consolidation** — до завершения merge данные могут быть «не досведены». Для строгого результата — `SELECT ... FINAL`.
+
+**Q: Когда использовать OPTIMIZE FINAL?**
+A: Почти **никогда** в production cron. OPTIMIZE FINAL принудительно мержит все parts — тяжёлый I/O, блокирует нормальные merges. Использовать: одноразово перед крупным анализом, или для тестирования корректности ReplacingMergeTree. В runtime — `SELECT ... FINAL` вместо `OPTIMIZE FINAL`.
+
 ## Связи
 
 - [ClickHouse Schema Design Patterns](clickhouse-schema-design-patterns.md)

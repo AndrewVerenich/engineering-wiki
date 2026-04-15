@@ -41,6 +41,20 @@ Per `insert-optimize-avoid-final`: не запускать `OPTIMIZE TABLE ... F
 4. Свести UPDATE/DELETE мутации к редким исключениям.  
 5. Не автоматизировать `OPTIMIZE FINAL` в регулярных DAG/cron.
 
+## Типичные вопросы на интервью
+
+**Q: Почему нельзя делать частые мелкие INSERT в ClickHouse?**
+A: Каждый INSERT создаёт **part** на диске. Много мелких inserts → part explosion → деградация merge-процесса → рост latency, ошибки «too many parts». Решение: батчировать (10k-100k строк) или включить **async_insert** (сервер буферизует мелкие вставки).
+
+**Q: Почему ALTER UPDATE/DELETE — плохая идея в ClickHouse?**
+A: Мутации **переписывают** parts целиком → тяжёлый I/O, блокировка merge. ClickHouse — append-optimized движок, не предназначен для row-level updates. Альтернативы: **ReplacingMergeTree** (versioned upsert), **CollapsingMergeTree** (soft delete через sign), **DROP PARTITION** для массового удаления по времени.
+
+**Q: Что такое async insert и когда его включать?**
+A: Режим, когда сервер буферизует мелкие вставки и записывает их в более крупные parts. Включать, когда клиент не может батчировать (IoT-устройства, high-frequency events). `async_insert=1, wait_for_async_insert=1` — безопасный режим с подтверждением.
+
+**Q: Что ты проверишь, если ingest деградирует?**
+A: 1) `system.parts` — количество active parts (должно быть управляемым). 2) Размер батчей — не слишком мелкие? 3) Есть ли регулярные мутации (UPDATE/DELETE)? 4) Не запущен ли `OPTIMIZE FINAL` по cron? 5) Background merges — справляются ли (нет ли merge backlog)?
+
 ## Связи
 
 - [ClickHouse Schema Design Patterns](clickhouse-schema-design-patterns.md)

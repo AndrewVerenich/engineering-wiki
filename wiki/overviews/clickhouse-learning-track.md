@@ -1,7 +1,5 @@
 # ClickHouse Learning Track (dbt-oriented)
 
-**Источник:** [Личный план изучения ClickHouse (через dbt)](../sources/clickhouse-learning-plan.md)
-
 Этот трек фокусируется на применении ClickHouse как аналитического хранилища в сочетании с dbt.
 
 ## Этап 1 — Core dbt на ClickHouse

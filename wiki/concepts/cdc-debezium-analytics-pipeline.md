@@ -91,6 +91,23 @@ Debezium часто работает в двух фазах:
 4. Иметь runbook: restart connector, replay диапазона, backfill.  
 5. Покрыть staging тестами на uniqueness/freshness/nullability.
 
+## Типичные вопросы на интервью
+
+**Q: Что такое CDC и зачем он нужен?**
+A: **Change Data Capture** — захват изменений из OLTP (через WAL/binlog) и публикация как потока событий. Зачем: 1) **Near real-time** ingestion без тяжёлых SELECT к прод-БД. 2) **Развязка** OLTP и DWH. 3) **История изменений** (не только текущее состояние). 4) **Replay** через Kafka retention.
+
+**Q: Как устроено событие Debezium?**
+A: Envelope: `before` (состояние до), `after` (состояние после), `op` (c/u/d/r), `ts_ms` (timestamp), `source` (metadata). Для аналитики: парсим envelope, сохраняем `op` и timestamp в landing, решаем стратегию для deletes.
+
+**Q: Как обеспечить exactly-once при CDC pipeline?**
+A: Debezium + Kafka дают **at-least-once**. Exactly-once — на стороне DWH через **идемпотентный staging**: `row_number() OVER (PARTITION BY pk ORDER BY source_ts DESC) = 1`. Или ReplacingMergeTree в ClickHouse. Ключевое: не считать CDC «exactly-once by default».
+
+**Q: Что делать с deletes в CDC?**
+A: Заранее определить политику: 1) **Hard delete** в витринах (удаляем строку). 2) **Soft delete** (`is_deleted` flag) — проще, сохраняет lineage. 3) Хранение всех изменений в **audit/history** слое. Tombstone-сообщения Kafka нужны для compaction топика.
+
+**Q: Что такое initial snapshot в Debezium и какие проблемы он создаёт?**
+A: Начальная выгрузка текущего состояния таблиц (все строки с `op='r'`). Проблемы: 1) Можно задвоить данные, если не отделить snapshot от streaming фазы. 2) Большой объём — нагрузка на источник. 3) При переинициализации коннектора — snapshot повторяется. Решение: dedup в staging по PK + source_ts.
+
 ## Связи
 
 - [ClickHouse + Kafka Ingestion](clickhouse-kafka-ingestion.md)

@@ -1,7 +1,5 @@
 # dbt Learning Roadmap
 
-**Источник:** [Личный план изучения dbt](../sources/dbt-learning-plan.md)
-
 ## Этап 1 — Core dbt
 
 **Цель:** понимать, как dbt строит DAG и компилирует SQL.
