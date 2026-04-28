@@ -9,6 +9,7 @@
 - [PostgreSQL 17 изнутри](../sources/postgresql-internals.md) — внутреннее устройство PostgreSQL: MVCC, буферный кеш, блокировки, индексы, планировщик.
 - [SQL: The Complete Reference](../sources/sql-complete-reference.md) — SQL-стандарт: транзакции, блокировки, уровни изоляции.
 - [Реляционные базы данных в примерах](../sources/relational-databases-in-examples.md) — нормальные формы, индексы, выполнение запросов.
+- [Stream Processing with Apache Flink](../sources/stream-processing-with-apache-flink.md) — stateful stream processing, event time, windows, watermarks, fault tolerance.
 
 ## Ключевые концепты (DDIA)
 
@@ -52,4 +53,17 @@
 
 ## Сущности
 
-- [PostgreSQL](../entities/postgresql.md), [Apache Kafka](../entities/apache-kafka.md)
+- [PostgreSQL](../entities/postgresql.md), [Apache Kafka](../entities/apache-kafka.md), [Apache Flink](../entities/apache-flink.md)
+
+## Flink stream processing
+
+- [Apache Flink Architecture](../concepts/flink-architecture.md)
+- [Flink DataStream API](../concepts/flink-datastream-api.md)
+- [Flink Stateless vs Stateful Operators](../concepts/flink-stateless-vs-stateful-operators.md)
+- [Flink Time and Watermarks](../concepts/flink-time-and-watermarks.md)
+- [Flink Windows](../concepts/flink-windows.md)
+- [Flink State Management](../concepts/flink-state-management.md)
+- [Flink Checkpoints and Savepoints](../concepts/flink-checkpoints-and-savepoints.md)
+- [Flink Exactly-Once Semantics](../concepts/flink-exactly-once-semantics.md)
+- [Flink ProcessFunction](../concepts/flink-process-function.md)
+- [Flink vs Spark Structured Streaming](../comparisons/flink-vs-spark-structured-streaming.md)

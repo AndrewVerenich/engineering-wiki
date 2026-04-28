@@ -46,4 +46,7 @@ A: Таблица — это materialised view потока изменений (
 
 - [Encoding and Schema Evolution](encoding-and-schema-evolution.md) — форматы в событиях.
 - [Apache Kafka](../entities/apache-kafka.md) — лог как транспорт потоков.
+- [Apache Flink](../entities/apache-flink.md) — stateful stream engine для production-пайплайнов.
+- [Flink Time and Watermarks](flink-time-and-watermarks.md) — event time и работа с late events.
+- [Flink Windows](flink-windows.md) — типы окон и их trade-offs.
 - [Derived Data and Systems](derived-data-and-systems.md) — unifying batch и stream.

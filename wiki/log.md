@@ -128,3 +128,22 @@
 - dbt и Spark concepts дополнены interview Q&A
 
 ---
+
+## [INGEST] Stream Processing with Apache Flink (Hueske, Kalavri)
+
+- Источник: `wiki/sources/stream-processing-with-apache-flink.md`
+- Entity: `wiki/entities/apache-flink.md`
+- Концепты:
+  - `wiki/concepts/flink-architecture.md` — JobManager/TaskManager, slots, chaining, data exchange, failover
+  - `wiki/concepts/flink-datastream-api.md` — как писать обработку в DataStream API (source -> transform -> sink)
+  - `wiki/concepts/flink-stateless-vs-stateful-operators.md` — stateless/stateful операторы, keyed/operator state
+  - `wiki/concepts/flink-time-and-watermarks.md` — event time, processing time, watermark стратегии, late events
+  - `wiki/concepts/flink-windows.md` — tumbling/sliding/session окна, triggers, allowed lateness
+  - `wiki/concepts/flink-state-management.md` — state types, state backends (HashMap/RocksDB), TTL, rescaling
+  - `wiki/concepts/flink-checkpoints-and-savepoints.md` — recovery, checkpoint lifecycle, savepoint operations
+  - `wiki/concepts/flink-exactly-once-semantics.md` — engine-level and end-to-end exactly-once
+  - `wiki/concepts/flink-process-function.md` — KeyedProcessFunction, timers, side outputs
+- Сравнение: `wiki/comparisons/flink-vs-spark-structured-streaming.md`
+- Обновлены: `wiki/index.md`, `wiki/overviews/data-engineering-fundamentals.md`, `wiki/concepts/stream-processing.md`
+
+---
