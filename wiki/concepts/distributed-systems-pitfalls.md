@@ -46,3 +46,4 @@ A: Network is reliable, latency is zero, bandwidth is infinite, network is secur
 
 - [Consistency and Consensus](consistency-and-consensus.md) — как строить порядок и согласие при этих ограничениях.
 - [Replication](replication.md) — задержки репликации и разрыв с реальностью.
+- [Redis Replication, Sentinel and Cluster](redis-replication-sentinel-cluster.md) — практический пример failover и trade-off между availability и consistency.

@@ -2,9 +2,11 @@
 
 Краткий **обзор** опорных идей для Java backend в этой вики. Раздел в стадии наполнения — состав тем зафиксирован, концепты добавляются по мере чтения источников.
 
-## Опорные книги (TBD)
+## Опорные книги
 
-Источники будут добавляться в `wiki/sources/` по мере прочтения. Ожидаемые направления:
+- [Redis in Action](../sources/redis-in-action.md) — caching patterns, atomic operations, HA (replication/sentinel/cluster), data modeling под in-memory store.
+
+Источники по JVM/Spring/Kotlin будут добавляться в `wiki/sources/` по мере прочтения. Ожидаемые направления:
 
 - JVM internals (Java Performance, Java Concurrency in Practice или их аналоги)
 - Spring (Spring in Action / документация Spring Framework и Spring Boot)
@@ -25,6 +27,13 @@ Java Memory Model, happens-before, `volatile`, `synchronized`, `java.util.concur
 ### Spring (TBD)
 
 IoC/DI, lifecycle бинов, AOP, Spring Boot (auto-configuration), Spring MVC vs WebFlux, Spring Data (JPA/JDBC/R2DBC/Redis), Spring Security (filters, OAuth2/JWT), Spring Cloud (config, gateway, circuit breakers).
+
+### Caching & Redis
+
+- [Redis](../entities/redis.md) — роль Redis в backend-архитектуре.
+- [Redis Caching Patterns and Consistency](../concepts/redis-caching-patterns-and-consistency.md)
+- [Redis Atomicity and Performance Patterns](../concepts/redis-atomicity-and-performance-patterns.md)
+- [Redis Replication, Sentinel and Cluster](../concepts/redis-replication-sentinel-cluster.md)
 
 ### Kotlin (TBD)
 
@@ -68,6 +77,7 @@ HTTP semantics (методы, статусы, кэширование), REST desi
 
 - [PostgreSQL](../entities/postgresql.md) — основная OLTP СУБД для backend.
 - [Apache Kafka](../entities/apache-kafka.md) — event log / message bus, типичная часть backend-стека.
+- [Redis](../entities/redis.md) — low-latency cache/state layer для backend.
 
 ## Связи
 

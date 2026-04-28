@@ -98,7 +98,7 @@
 
 ## Сущности
 
-- [PostgreSQL](../entities/postgresql.md), [Apache Kafka](../entities/apache-kafka.md), [Apache Flink](../entities/apache-flink.md)
+- [PostgreSQL](../entities/postgresql.md), [Apache Kafka](../entities/apache-kafka.md), [Apache Flink](../entities/apache-flink.md), [Redis](../entities/redis.md)
 
 ## Связи
 

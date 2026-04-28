@@ -24,6 +24,7 @@ Wiki разбита на **три зоны**:
 | [The Data Warehouse Toolkit](sources/the-data-warehouse-toolkit.md) | DE |
 | [ClickHouse Official Documentation](sources/clickhouse-official-documentation.md) | DE |
 | [Stream Processing with Apache Flink](sources/stream-processing-with-apache-flink.md) | DE |
+| [Redis in Action](sources/redis-in-action.md) | Foundations + Java Backend |
 
 ## Foundations (shared)
 
@@ -42,12 +43,14 @@ Wiki разбита на **три зоны**:
 - [SQL Transactions, Locking and Isolation](concepts/sql-transactions-locking-standard.md)
 - [PostgreSQL MVCC Internals](concepts/postgresql-mvcc-internals.md)
 - [PostgreSQL vs MySQL: MVCC](comparisons/postgresql-vs-mysql-mvcc.md)
+- [Redis Persistence: RDB vs AOF](concepts/redis-persistence-rdb-vs-aof.md)
 
 ### SQL & Relational Modeling
 
 - [Data Models and Query Languages](concepts/data-models-and-query-languages.md)
 - [Normalization and Normal Forms](concepts/normalization-and-normal-forms.md)
 - [SQL Query Execution and Indexes](concepts/sql-query-execution-and-indexes.md)
+- [Redis Data Structures and Modeling](concepts/redis-data-structures-and-modeling.md)
 
 ## Data Engineering
 
@@ -107,22 +110,42 @@ Wiki разбита на **три зоны**:
 
 ## Java Backend
 
-> Раздел в стадии наполнения. Структура задана в [SCHEMA.md](../schema/SCHEMA.md); состав тем — в [Java Backend Fundamentals](overviews/java-backend-fundamentals.md). Концепты добавляются по мере чтения источников.
+### Caching & Redis
 
-Темы (планируемые):
+- [Redis Caching Patterns and Consistency](concepts/redis-caching-patterns-and-consistency.md)
+- [Redis Atomicity and Performance Patterns](concepts/redis-atomicity-and-performance-patterns.md)
+- [Redis Replication, Sentinel and Cluster](concepts/redis-replication-sentinel-cluster.md)
 
-- **JVM internals** — память (heap/metaspace), GC, JIT, class loading.
-- **Concurrency & memory model** — JMM, `java.util.concurrent`, virtual threads, structured concurrency.
-- **Spring** — IoC/DI, AOP, Boot, MVC/WebFlux, Data, Security, Cloud.
-- **Kotlin** — null-safety, coroutines, идиомы для backend.
-- **Web & APIs** — REST/HTTP semantics, gRPC, OpenAPI, идемпотентность, retries.
-- **Observability** — metrics, tracing, logging (Micrometer, OpenTelemetry).
+### JVM internals (planned)
+
+- (TBD) heap/metaspace, GC, JIT, class loading.
+
+### Concurrency & memory model (planned)
+
+- (TBD) JMM, `java.util.concurrent`, virtual threads, structured concurrency.
+
+### Spring (planned)
+
+- (TBD) IoC/DI, AOP, Boot, MVC/WebFlux, Data, Security.
+
+### Kotlin (planned)
+
+- (TBD) null-safety, coroutines, idioms for backend.
+
+### Web & APIs (planned)
+
+- (TBD) REST/HTTP semantics, gRPC, OpenAPI, idempotency, retries.
+
+### Observability (planned)
+
+- (TBD) metrics, tracing, logging (Micrometer, OpenTelemetry).
 
 ## Entities
 
 - [PostgreSQL](entities/postgresql.md) — Foundations / DE
 - [Apache Kafka](entities/apache-kafka.md) — Foundations / DE
 - [Apache Flink](entities/apache-flink.md) — DE
+- [Redis](entities/redis.md) — Foundations / Java Backend
 
 ## Overviews
 

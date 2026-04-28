@@ -167,3 +167,18 @@
 - Цель — фиксировать в правилах: каждая concept/comparison-страница принадлежит одной зоне; multi-zone ingest (одна книга → несколько зон) — норма; cross-zone связи делаются через `## Связи`, а не через дублирование в `index.md`.
 
 ---
+
+## [INGEST] Redis in Action (Josiah L. Carlson)
+
+- Источник: `wiki/sources/redis-in-action.md`
+- Entity: `wiki/entities/redis.md`
+- Концепты:
+  - `wiki/concepts/redis-data-structures-and-modeling.md` — структуры данных Redis, key design, manual secondary indexes
+  - `wiki/concepts/redis-persistence-rdb-vs-aof.md` — durability trade-offs, RDB/AOF, fsync policies
+  - `wiki/concepts/redis-replication-sentinel-cluster.md` — replication, HA failover, sharding through cluster
+  - `wiki/concepts/redis-caching-patterns-and-consistency.md` — cache-aside/write-through/write-behind, stampede, invalidation
+  - `wiki/concepts/redis-atomicity-and-performance-patterns.md` — MULTI/EXEC, WATCH, Lua, pipelining
+- Обновлены: `wiki/index.md`, `wiki/overviews/java-backend-fundamentals.md`, `wiki/overviews/data-engineering-fundamentals.md`, `wiki/concepts/distributed-systems-pitfalls.md`
+- Зоны: Foundations + Java Backend (multi-zone ingest from one source)
+
+---
