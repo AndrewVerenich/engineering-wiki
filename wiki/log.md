@@ -147,3 +147,23 @@
 - Обновлены: `wiki/index.md`, `wiki/overviews/data-engineering-fundamentals.md`, `wiki/concepts/stream-processing.md`
 
 ---
+
+## [REFACTOR] Index restructured for Java Backend + Data Engineering
+
+- Заглавная `wiki/index.md` перестроена на три зоны: **Foundations** (общее для backend и DE), **Data Engineering**, **Java Backend**.
+- Foundations: Distributed Systems & System Design (DDIA-distributed: replication/partitioning/consistency/pitfalls/encoding) + Transactions/SQL/PG-internals + Relational Modeling.
+- DE: DDIA-data chapters (storage/batch/stream/derived/OLTP-OLAP), Kimball, ClickHouse, dbt, Spark, Flink.
+- Java Backend: пока пустой раздел с зафиксированными темами (JVM, Concurrency, Spring, Kotlin, Web/APIs, Observability) — будет наполняться по мере чтения источников.
+- Создан: `wiki/overviews/java-backend-fundamentals.md` — каркас-зеркало DE-overview.
+- Обновлён: `wiki/overviews/data-engineering-fundamentals.md` — выделен блок «Связанные foundations», SQL/PG-книги отмечены как foundations-источники.
+- Принцип: каждая страница лежит в одной зоне, дублирование ссылок не делается; пересечения выражаются через секцию «Связи» внутри страниц.
+
+---
+
+## [UPDATE] SCHEMA.md и SKILL.md приведены под трёхзонную модель
+
+- `schema/SCHEMA.md` переписан: добавлен раздел 1 «Wiki Zones» (Foundations / Data Engineering / Java Backend) с подсекциями, явный **зональный маршрутизатор** (таблица «тема → зона») и правило multi-zone ingest. Разделы Types of pages / Ingest / Query / Lint обновлены под зональную модель.
+- `.cursor/skills/engineering-wiki/SKILL.md`: добавлена секция «Wiki Zones» с краткой сводкой и принципом определения зоны; принцип «zone-routed» включён в Core Principles; Ingest Workflow расширен шагом классификации тем по зонам и обновлением domain overview; Index Structure описан в трёхзонном виде; Lint / Maintenance дополнен проверками zone integrity.
+- Цель — фиксировать в правилах: каждая concept/comparison-страница принадлежит одной зоне; multi-zone ingest (одна книга → несколько зон) — норма; cross-zone связи делаются через `## Связи`, а не через дублирование в `index.md`.
+
+---
