@@ -6,6 +6,8 @@
 
 Главная идея Redis-моделирования: сначала выбирается **операция**, которую нужно делать быстро, и под неё подбирается структура данных (`String`, `Hash`, `Set`, `ZSET`, `List`). Это противоположно реляционному подходу «нормализуй таблицы и query planner всё соберёт». В Redis нет joins и вторичных индексов «из коробки» как в SQL — их строят руками через дополнительные ключи и соглашения именования.
 
+Эта страница — обзорный уровень. Глубокий разбор внутренних структур, Streams/HyperLogLog/Geo и memory trade-offs вынесен в [Redis Advanced Data Structures](redis-advanced-data-structures.md).
+
 ## Ключевые структуры данных
 
 | Структура | Что хранит | Типичный use-case |
@@ -56,6 +58,8 @@ A: 1) Случайные несогласованные имена ключей 
 ## Связи
 
 - [Redis](../entities/redis.md)
+- [Redis Advanced Data Structures](redis-advanced-data-structures.md)
+- [Redis Internals: Event Loop and Encodings](redis-internals-event-loop-and-encodings.md)
 - [Redis Caching Patterns and Consistency](redis-caching-patterns-and-consistency.md)
 - [Data Models and Query Languages](data-models-and-query-languages.md)
 - [Partitioning](partitioning.md)

@@ -11,6 +11,8 @@
 
 Практическая книга про Redis как in-memory datastore для backend-задач: кэширование, очереди, счётчики, leaderboard'ы, rate limiting, pub/sub и базовые аспекты эксплуатации (persistence, replication, sharding). Главная ценность — не синтаксис команд, а инженерные паттерны: как моделировать данные под структуры Redis и как держать баланс между latency, consistency и durability.
 
+Важно: книга 2013 года, поэтому не покрывает многие современные возможности Redis (Streams, ACL, Functions, sharded pub/sub). Для актуального материала использовать [Redis Official Documentation](redis-official-documentation.md).
+
 ## Структура
 
 1. First steps with Redis — ключи, строковые/хеш/списки/множества/ZSET.

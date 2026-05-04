@@ -48,12 +48,17 @@ A: Со временем AOF растёт, потому что хранит ис
 **Q: Что произойдёт при сбое во время snapshot/rewrite?**  
 A: Redis делает snapshot/rewrite через fork + copy-on-write: родитель продолжает обслуживать клиентов, дочерний процесс пишет файл. При сбое обычно сохраняется старый консистентный файл, а временный повреждённый отбрасывается. Цена — всплеск памяти из-за COW при активных writes.
 
+**Q: Как fork + COW влияет на memory planning?**  
+A: Во время `BGSAVE`/`BGREWRITEAOF` активные write'ы приводят к копированию изменённых страниц, поэтому фактический RSS может заметно вырасти. Если не оставить memory headroom, процесс может упереться в лимиты контейнера/OS и спровоцировать инцидент.
+
 **Q: Можно ли считать Redis durable database как PostgreSQL?**  
 A: Не в том же смысле. Redis даёт persistence, но durability profile зависит от конфигурации (RDB/AOF policy), репликации и дисциплины эксплуатации. PostgreSQL ориентирован на durable system-of-record по умолчанию. Redis чаще layer for speed, а не primary source of truth.
 
 ## Связи
 
 - [Redis](../entities/redis.md)
+- [Redis Internals: Event Loop and Encodings](redis-internals-event-loop-and-encodings.md)
 - [Redis Replication, Sentinel and Cluster](redis-replication-sentinel-cluster.md)
+- [Redis Memory Management and Eviction](redis-memory-management-and-eviction.md)
 - [Distributed Systems Pitfalls](distributed-systems-pitfalls.md)
 - [Storage and Retrieval](storage-and-retrieval.md)

@@ -25,6 +25,7 @@ Wiki разбита на **три зоны**:
 | [ClickHouse Official Documentation](sources/clickhouse-official-documentation.md) | DE |
 | [Stream Processing with Apache Flink](sources/stream-processing-with-apache-flink.md) | DE |
 | [Redis in Action](sources/redis-in-action.md) | Foundations + Java Backend |
+| [Redis Official Documentation](sources/redis-official-documentation.md) | Foundations + Java Backend |
 
 ## Foundations (shared)
 
@@ -44,6 +45,8 @@ Wiki разбита на **три зоны**:
 - [PostgreSQL MVCC Internals](concepts/postgresql-mvcc-internals.md)
 - [PostgreSQL vs MySQL: MVCC](comparisons/postgresql-vs-mysql-mvcc.md)
 - [Redis Persistence: RDB vs AOF](concepts/redis-persistence-rdb-vs-aof.md)
+- [Redis Internals: Event Loop and Encodings](concepts/redis-internals-event-loop-and-encodings.md)
+- [Redis Memory Management and Eviction](concepts/redis-memory-management-and-eviction.md)
 
 ### SQL & Relational Modeling
 
@@ -51,6 +54,7 @@ Wiki разбита на **три зоны**:
 - [Normalization and Normal Forms](concepts/normalization-and-normal-forms.md)
 - [SQL Query Execution and Indexes](concepts/sql-query-execution-and-indexes.md)
 - [Redis Data Structures and Modeling](concepts/redis-data-structures-and-modeling.md)
+- [Redis Advanced Data Structures](concepts/redis-advanced-data-structures.md)
 
 ## Data Engineering
 
@@ -115,6 +119,11 @@ Wiki разбита на **три зоны**:
 - [Redis Caching Patterns and Consistency](concepts/redis-caching-patterns-and-consistency.md)
 - [Redis Atomicity and Performance Patterns](concepts/redis-atomicity-and-performance-patterns.md)
 - [Redis Replication, Sentinel and Cluster](concepts/redis-replication-sentinel-cluster.md)
+- [Redis Distributed Locks](concepts/redis-distributed-locks.md)
+- [Redis Rate Limiting Patterns](concepts/redis-rate-limiting-patterns.md)
+- [Redis Pub/Sub and Streams](concepts/redis-pubsub-and-streams.md)
+- [Redis Observability and Production Gotchas](concepts/redis-observability-and-production-gotchas.md)
+- [Redis vs Memcached](comparisons/redis-vs-memcached.md)
 
 ### JVM internals (planned)
 

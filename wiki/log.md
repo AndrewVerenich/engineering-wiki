@@ -182,3 +182,22 @@
 - Зоны: Foundations + Java Backend (multi-zone ingest from one source)
 
 ---
+
+## [UPDATE] Redis: senior-level deep dive
+
+- Новый source: `wiki/sources/redis-official-documentation.md`
+- Новые концепты (Foundations):
+  - `wiki/concepts/redis-internals-event-loop-and-encodings.md`
+  - `wiki/concepts/redis-memory-management-and-eviction.md`
+  - `wiki/concepts/redis-advanced-data-structures.md`
+- Новые концепты (Java Backend / Caching & Redis):
+  - `wiki/concepts/redis-distributed-locks.md`
+  - `wiki/concepts/redis-rate-limiting-patterns.md`
+  - `wiki/concepts/redis-pubsub-and-streams.md`
+  - `wiki/concepts/redis-observability-and-production-gotchas.md`
+- Новое сравнение: `wiki/comparisons/redis-vs-memcached.md`
+- Существенно обновлены: `wiki/entities/redis.md`, Redis concept cross-links, `wiki/sources/redis-in-action.md`
+- Обновлены агрегаторы: `wiki/index.md`, `wiki/overviews/java-backend-fundamentals.md`
+- Зоны: Foundations + Java Backend
+
+---

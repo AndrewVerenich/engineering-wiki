@@ -56,5 +56,7 @@ A: Типичный паттерн: 1) commit в PostgreSQL (source of truth), 2
 - [Redis](../entities/redis.md)
 - [Redis Data Structures and Modeling](redis-data-structures-and-modeling.md)
 - [Redis Atomicity and Performance Patterns](redis-atomicity-and-performance-patterns.md)
+- [Redis Distributed Locks](redis-distributed-locks.md)
+- [Redis Observability and Production Gotchas](redis-observability-and-production-gotchas.md)
 - [Reliability, Scalability, Maintainability](reliability-scalability-maintainability.md)
 - [Transactions and Isolation](transactions-and-isolation.md)

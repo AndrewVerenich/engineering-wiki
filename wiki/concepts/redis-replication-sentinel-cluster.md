@@ -62,6 +62,8 @@ A: Нет в ACID/linearizable смысле для всего кластера. 
 
 - [Redis](../entities/redis.md)
 - [Redis Persistence: RDB vs AOF](redis-persistence-rdb-vs-aof.md)
+- [Redis Pub/Sub and Streams](redis-pubsub-and-streams.md)
+- [Redis Observability and Production Gotchas](redis-observability-and-production-gotchas.md)
 - [Replication](replication.md)
 - [Partitioning](partitioning.md)
 - [Consistency and Consensus](consistency-and-consensus.md)

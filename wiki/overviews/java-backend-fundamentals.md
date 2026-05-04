@@ -5,6 +5,7 @@
 ## Опорные книги
 
 - [Redis in Action](../sources/redis-in-action.md) — caching patterns, atomic operations, HA (replication/sentinel/cluster), data modeling под in-memory store.
+- [Redis Official Documentation](../sources/redis-official-documentation.md) — актуальные internals/details: Streams, memory management, observability, cluster behavior.
 
 Источники по JVM/Spring/Kotlin будут добавляться в `wiki/sources/` по мере прочтения. Ожидаемые направления:
 
@@ -34,6 +35,11 @@ IoC/DI, lifecycle бинов, AOP, Spring Boot (auto-configuration), Spring MVC 
 - [Redis Caching Patterns and Consistency](../concepts/redis-caching-patterns-and-consistency.md)
 - [Redis Atomicity and Performance Patterns](../concepts/redis-atomicity-and-performance-patterns.md)
 - [Redis Replication, Sentinel and Cluster](../concepts/redis-replication-sentinel-cluster.md)
+- [Redis Distributed Locks](../concepts/redis-distributed-locks.md)
+- [Redis Rate Limiting Patterns](../concepts/redis-rate-limiting-patterns.md)
+- [Redis Pub/Sub and Streams](../concepts/redis-pubsub-and-streams.md)
+- [Redis Observability and Production Gotchas](../concepts/redis-observability-and-production-gotchas.md)
+- [Redis vs Memcached](../comparisons/redis-vs-memcached.md)
 
 ### Kotlin (TBD)
 
