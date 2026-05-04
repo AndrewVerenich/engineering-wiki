@@ -6,6 +6,8 @@
 
 - [Redis in Action](../sources/redis-in-action.md) — caching patterns, atomic operations, HA (replication/sentinel/cluster), data modeling под in-memory store.
 - [Redis Official Documentation](../sources/redis-official-documentation.md) — актуальные internals/details: Streams, memory management, observability, cluster behavior.
+- [Kafka in Action](../sources/kafka-in-action.md) — producer/consumer internals, topic design, delivery patterns, broker model.
+- [Kafka Official Documentation](../sources/kafka-official-documentation.md) — KRaft, transactions, tuning и production operations.
 
 Источники по JVM/Spring/Kotlin будут добавляться в `wiki/sources/` по мере прочтения. Ожидаемые направления:
 
@@ -40,6 +42,15 @@ IoC/DI, lifecycle бинов, AOP, Spring Boot (auto-configuration), Spring MVC 
 - [Redis Pub/Sub and Streams](../concepts/redis-pubsub-and-streams.md)
 - [Redis Observability and Production Gotchas](../concepts/redis-observability-and-production-gotchas.md)
 - [Redis vs Memcached](../comparisons/redis-vs-memcached.md)
+
+### Messaging & Kafka
+
+- [Apache Kafka](../entities/apache-kafka.md) — роль Kafka в backend-архитектуре.
+- [Kafka Producer Internals and Tuning](../concepts/kafka-producer-internals-and-tuning.md)
+- [Kafka Consumer Internals and Offsets](../concepts/kafka-consumer-internals-and-offsets.md)
+- [Kafka Backend Patterns: Outbox, DLQ, Retry](../concepts/kafka-backend-patterns-outbox-dlq-retry.md)
+- [Kafka Observability and Production Gotchas](../concepts/kafka-observability-and-production-gotchas.md)
+- [Kafka vs RabbitMQ](../comparisons/kafka-vs-rabbitmq.md)
 
 ### Kotlin (TBD)
 

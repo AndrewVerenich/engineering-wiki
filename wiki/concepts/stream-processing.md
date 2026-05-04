@@ -50,3 +50,5 @@ A: Таблица — это materialised view потока изменений (
 - [Flink Time and Watermarks](flink-time-and-watermarks.md) — event time и работа с late events.
 - [Flink Windows](flink-windows.md) — типы окон и их trade-offs.
 - [Derived Data and Systems](derived-data-and-systems.md) — unifying batch и stream.
+- [Kafka Delivery Semantics and Transactions](kafka-delivery-semantics-and-transactions.md) — детально про EOS/idempotence/read_committed.
+- [Kafka Consumer Internals and Offsets](kafka-consumer-internals-and-offsets.md) — offset lifecycle, commit стратегии, rebalance.

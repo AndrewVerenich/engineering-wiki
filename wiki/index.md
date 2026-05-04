@@ -26,6 +26,8 @@ Wiki разбита на **три зоны**:
 | [Stream Processing with Apache Flink](sources/stream-processing-with-apache-flink.md) | DE |
 | [Redis in Action](sources/redis-in-action.md) | Foundations + Java Backend |
 | [Redis Official Documentation](sources/redis-official-documentation.md) | Foundations + Java Backend |
+| [Kafka in Action](sources/kafka-in-action.md) | Foundations + Java Backend + DE |
+| [Kafka Official Documentation](sources/kafka-official-documentation.md) | Foundations + Java Backend + DE |
 
 ## Foundations (shared)
 
@@ -37,6 +39,12 @@ Wiki разбита на **три зоны**:
 - [Distributed Systems Pitfalls](concepts/distributed-systems-pitfalls.md)
 - [Consistency and Consensus](concepts/consistency-and-consensus.md)
 - [Encoding and Schema Evolution](concepts/encoding-and-schema-evolution.md)
+- [Kafka Storage and Log Internals](concepts/kafka-storage-and-log-internals.md)
+- [Kafka Replication and ISR](concepts/kafka-replication-and-isr.md)
+- [Kafka Controller and KRaft](concepts/kafka-controller-and-kraft.md)
+- [Kafka Delivery Semantics and Transactions](concepts/kafka-delivery-semantics-and-transactions.md)
+- [Kafka Topic Design and Compaction](concepts/kafka-topic-design-and-compaction.md)
+- [Kafka Schema Registry and Evolution](concepts/kafka-schema-registry-and-evolution.md)
 
 ### Transactions, Isolation & Storage Internals
 
@@ -112,6 +120,11 @@ Wiki разбита на **три зоны**:
 - [Flink ProcessFunction](concepts/flink-process-function.md)
 - [Flink vs Spark Structured Streaming](comparisons/flink-vs-spark-structured-streaming.md)
 
+### Apache Kafka
+
+- [Kafka in DE Pipelines](concepts/kafka-in-de-pipelines.md)
+- [Kafka Connect Fundamentals](concepts/kafka-connect-fundamentals.md)
+
 ## Java Backend
 
 ### Caching & Redis
@@ -124,6 +137,14 @@ Wiki разбита на **три зоны**:
 - [Redis Pub/Sub and Streams](concepts/redis-pubsub-and-streams.md)
 - [Redis Observability and Production Gotchas](concepts/redis-observability-and-production-gotchas.md)
 - [Redis vs Memcached](comparisons/redis-vs-memcached.md)
+
+### Messaging & Kafka
+
+- [Kafka Producer Internals and Tuning](concepts/kafka-producer-internals-and-tuning.md)
+- [Kafka Consumer Internals and Offsets](concepts/kafka-consumer-internals-and-offsets.md)
+- [Kafka Backend Patterns: Outbox, DLQ, Retry](concepts/kafka-backend-patterns-outbox-dlq-retry.md)
+- [Kafka Observability and Production Gotchas](concepts/kafka-observability-and-production-gotchas.md)
+- [Kafka vs RabbitMQ](comparisons/kafka-vs-rabbitmq.md)
 
 ### JVM internals (planned)
 
@@ -152,7 +173,7 @@ Wiki разбита на **три зоны**:
 ## Entities
 
 - [PostgreSQL](entities/postgresql.md) — Foundations / DE
-- [Apache Kafka](entities/apache-kafka.md) — Foundations / DE
+- [Apache Kafka](entities/apache-kafka.md) — Foundations / Java Backend / DE
 - [Apache Flink](entities/apache-flink.md) — DE
 - [Redis](entities/redis.md) — Foundations / Java Backend
 

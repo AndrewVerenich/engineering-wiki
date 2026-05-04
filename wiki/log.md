@@ -201,3 +201,30 @@
 - Зоны: Foundations + Java Backend
 
 ---
+
+## [INGEST] Kafka in Action + Kafka Official Documentation
+
+- Источники:
+  - `wiki/sources/kafka-in-action.md`
+  - `wiki/sources/kafka-official-documentation.md`
+- Новые концепты (Foundations / Distributed Systems):
+  - `wiki/concepts/kafka-storage-and-log-internals.md`
+  - `wiki/concepts/kafka-replication-and-isr.md`
+  - `wiki/concepts/kafka-controller-and-kraft.md`
+  - `wiki/concepts/kafka-delivery-semantics-and-transactions.md`
+  - `wiki/concepts/kafka-topic-design-and-compaction.md`
+  - `wiki/concepts/kafka-schema-registry-and-evolution.md`
+- Новые концепты (Java Backend / Messaging & Kafka):
+  - `wiki/concepts/kafka-producer-internals-and-tuning.md`
+  - `wiki/concepts/kafka-consumer-internals-and-offsets.md`
+  - `wiki/concepts/kafka-backend-patterns-outbox-dlq-retry.md`
+  - `wiki/concepts/kafka-observability-and-production-gotchas.md`
+- Новые концепты (Data Engineering / Apache Kafka):
+  - `wiki/concepts/kafka-in-de-pipelines.md`
+  - `wiki/concepts/kafka-connect-fundamentals.md`
+- Новое сравнение: `wiki/comparisons/kafka-vs-rabbitmq.md`
+- Существенно обновлены: `wiki/entities/apache-kafka.md`, cross-links в DDIA/DE/Redis концептах
+- Обновлены агрегаторы: `wiki/index.md`, `wiki/overviews/java-backend-fundamentals.md`, `wiki/overviews/data-engineering-fundamentals.md`
+- Зоны: Foundations + Java Backend + Data Engineering
+
+---

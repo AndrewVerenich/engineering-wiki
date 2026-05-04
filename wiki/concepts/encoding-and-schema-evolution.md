@@ -45,3 +45,4 @@ A: Landing/staging слой допускает эволюцию (Avro + schema r
 - [Stream Processing](stream-processing.md) — схемы в потоках событий.
 - [Replication](replication.md) — репликация логов и форматов.
 - [CDC: Debezium → Kafka → ClickHouse](cdc-debezium-analytics-pipeline.md) — schema evolution в CDC.
+- [Kafka Schema Registry and Evolution](kafka-schema-registry-and-evolution.md) — naming strategies, compatibility modes, Kafka-specific pitfalls.

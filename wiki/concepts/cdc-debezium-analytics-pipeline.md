@@ -114,3 +114,5 @@ A: Начальная выгрузка текущего состояния та�
 - [dbt: слои проекта](dbt-project-layers.md)
 - [Staging and Presentation Layers](staging-and-presentation-layers.md)
 - [Encoding and Schema Evolution](encoding-and-schema-evolution.md)
+- [Kafka In DE Pipelines](kafka-in-de-pipelines.md)
+- [Kafka Connect Fundamentals](kafka-connect-fundamentals.md)

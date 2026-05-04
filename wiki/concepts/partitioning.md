@@ -46,3 +46,5 @@ A: Запрос без подходящего partition key → координа
 - [Replication](replication.md) — каждая партиция обычно реплицируется.
 - [Transactions and Isolation](transactions-and-isolation.md) — транзакции между партициями дороже.
 - [Apache Kafka](../entities/apache-kafka.md) — партиции топиков.
+- [Kafka Topic Design and Compaction](kafka-topic-design-and-compaction.md) — выбор partitions, key design и compaction trade-offs.
+- [Kafka Storage and Log Internals](kafka-storage-and-log-internals.md) — как partition реализован на уровне сегментов и index файлов.

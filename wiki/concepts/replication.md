@@ -48,3 +48,4 @@ A: Каждая partition имеет leader и ISR (in-sync replicas). Producer 
 - [Partitioning](partitioning.md) — репликация и партиции часто комбинируются.
 - [Consistency and Consensus](consistency-and-consensus.md) — согласованность реплик.
 - [Apache Kafka](../entities/apache-kafka.md) — репликация логов партиций.
+- [Kafka Replication and ISR](kafka-replication-and-isr.md) — deep dive по ISR, HW/LEO и durability-матрице.

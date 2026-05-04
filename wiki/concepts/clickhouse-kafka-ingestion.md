@@ -37,3 +37,5 @@ Kafka Topic → Kafka Engine table → Materialized View → MergeTree (целе
 - [Replication](replication.md) (лог Kafka как реплицируемый журнал)
 - [ClickHouse Schema Design Patterns](clickhouse-schema-design-patterns.md)
 - [ClickHouse Insert and Mutation Strategy](clickhouse-insert-and-mutation-strategy.md)
+- [Kafka In DE Pipelines](kafka-in-de-pipelines.md)
+- [Kafka Storage and Log Internals](kafka-storage-and-log-internals.md)

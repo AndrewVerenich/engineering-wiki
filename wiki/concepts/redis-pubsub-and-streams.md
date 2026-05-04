@@ -72,3 +72,4 @@ A: Писать в stream без стратегии retention/trim и без м�
 - [Redis Replication, Sentinel and Cluster](redis-replication-sentinel-cluster.md)
 - [Redis Observability and Production Gotchas](redis-observability-and-production-gotchas.md)
 - [Redis](../entities/redis.md)
+- [Kafka Delivery Semantics and Transactions](kafka-delivery-semantics-and-transactions.md)

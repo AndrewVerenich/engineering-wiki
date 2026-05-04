@@ -8,6 +8,8 @@
 - [The Data Warehouse Toolkit](../sources/the-data-warehouse-toolkit.md) — **dimensional modeling** (Kimball): витрины, SCD, conformed dimensions.
 - [ClickHouse Official Documentation](../sources/clickhouse-official-documentation.md) — внутреннее устройство и best practices ClickHouse.
 - [Stream Processing with Apache Flink](../sources/stream-processing-with-apache-flink.md) — stateful stream processing, event time, windows, watermarks, fault tolerance.
+- [Kafka in Action](../sources/kafka-in-action.md) — устройство Kafka и практики проектирования topic/consumer/producer.
+- [Kafka Official Documentation](../sources/kafka-official-documentation.md) — актуальные internals, KRaft, Connect и operations.
 
 > Книги по СУБД и SQL ([PostgreSQL 17 изнутри](../sources/postgresql-internals.md), [SQL: The Complete Reference](../sources/sql-complete-reference.md), [Реляционные базы данных в примерах](../sources/relational-databases-in-examples.md)) перенесены в Foundations — см. ниже.
 
@@ -69,6 +71,13 @@
 - [Flink Exactly-Once Semantics](../concepts/flink-exactly-once-semantics.md)
 - [Flink ProcessFunction](../concepts/flink-process-function.md)
 - [Flink vs Spark Structured Streaming](../comparisons/flink-vs-spark-structured-streaming.md)
+
+### Apache Kafka
+
+- [Kafka in DE Pipelines](../concepts/kafka-in-de-pipelines.md)
+- [Kafka Connect Fundamentals](../concepts/kafka-connect-fundamentals.md)
+- [Apache Kafka](../entities/apache-kafka.md)
+- Связанные foundations: [Kafka Storage and Log Internals](../concepts/kafka-storage-and-log-internals.md), [Kafka Replication and ISR](../concepts/kafka-replication-and-isr.md), [Kafka Topic Design and Compaction](../concepts/kafka-topic-design-and-compaction.md), [Kafka Schema Registry and Evolution](../concepts/kafka-schema-registry-and-evolution.md)
 
 ## Связанные foundations (общие с backend)
 
