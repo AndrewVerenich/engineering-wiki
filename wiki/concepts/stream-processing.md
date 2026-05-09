@@ -37,7 +37,7 @@ A: В строгом смысле impossible across system boundaries. На пр
 A: **Watermark** определяет, когда считать окно «закрытым». Late events после watermark: 1) отбросить (потеря), 2) side output для отдельной обработки, 3) allowed lateness — окно остаётся открытым дольше и результат обновляется. Выбор зависит от бизнес-требований.
 
 **Q: Когда использовать Kafka Streams vs Flink vs Spark Streaming?**
-A: **Kafka Streams** — lightweight library, встраивается в JVM-приложение, хорошо для обогащения и простых агрегатов. **Flink** — полноценный stream engine, мощные окна, exactly-once, event time; для сложных пайплайнов. **Spark Structured Streaming** — micro-batch, удобно если уже используешь Spark для batch. В data engineering: Flink для true real-time; Spark SS для unified batch+stream.
+A: **Kafka Streams** — lightweight library, встраивается в JVM-приложение, хорошо для обогащения и простых агрегатов. **Flink** — полноценный stream engine, мощные окна, exactly-once, event time; для сложных пайплайнов. **Spark Structured Streaming** — micro-batch, удобно если уже используешь Spark для batch. В data engineering: Flink для true real-time; Spark SS для unified batch+stream. Подробное сравнение: [Kafka Streams vs Flink](../comparisons/kafka-streams-vs-flink.md).
 
 **Q: Что такое stream-table duality?**
 A: Таблица — это materialised view потока изменений (compacted log). Поток — это changelog таблицы. Kafka compacted topics — пример: log → table. CDC — table → stream. Это основа для CQRS, event sourcing, и Kafka Streams KTable.
@@ -52,3 +52,6 @@ A: Таблица — это materialised view потока изменений (
 - [Derived Data and Systems](derived-data-and-systems.md) — unifying batch и stream.
 - [Kafka Delivery Semantics and Transactions](kafka-delivery-semantics-and-transactions.md) — детально про EOS/idempotence/read_committed.
 - [Kafka Consumer Internals and Offsets](kafka-consumer-internals-and-offsets.md) — offset lifecycle, commit стратегии, rebalance.
+- [Kafka Streams: KStream, KTable, GlobalKTable](kafka-streams-kstream-and-ktable.md) — stream-table duality на практическом API.
+- [Kafka Streams Windowing](kafka-streams-windowing.md) — окно, grace и поздние события в Kafka Streams.
+- [Kafka Streams Exactly-Once](kafka-streams-exactly-once.md) — EOS v2 в app-centric runtime.

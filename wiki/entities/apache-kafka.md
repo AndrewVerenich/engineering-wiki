@@ -56,6 +56,7 @@ Kafka разделяет data plane (чтение/запись событий) �
 | **Retention / Compaction** | Time/size retention для history; compaction для latest-value state по ключу. |
 | **KRaft controller** | Замена ZooKeeper для metadata management: Kafka сама управляет control plane через Raft quorum. |
 | **Schema governance** | Schema Registry (внешний сервис) снижает риск breaking schema changes в event contracts. |
+| **Kafka Streams ecosystem** | Kafka выступает runtime-фундаментом для Kafka Streams: input/output/repartition/changelog topics, транзакции EOS v2 и stateful processing в JVM-приложениях. |
 | **Observability** | JMX metrics, consumer lag, ISR health, rebalance behavior — базовые сигналы для production SLO. |
 
 ## Когда Kafka vs альтернативы
@@ -114,6 +115,9 @@ A: KRaft упрощает архитектуру (меньше внешних к
 - [Kafka Observability and Production Gotchas](../concepts/kafka-observability-and-production-gotchas.md)
 - [Kafka in DE Pipelines](../concepts/kafka-in-de-pipelines.md)
 - [Kafka Connect Fundamentals](../concepts/kafka-connect-fundamentals.md)
+- [Kafka Streams](kafka-streams.md)
+- [Kafka Streams vs Flink](../comparisons/kafka-streams-vs-flink.md)
+- [Kafka Streams vs Kafka Consumer](../comparisons/kafka-streams-vs-kafka-consumer.md)
 - [Kafka vs RabbitMQ](../comparisons/kafka-vs-rabbitmq.md)
 - [Replication](../concepts/replication.md)
 - [Partitioning](../concepts/partitioning.md)

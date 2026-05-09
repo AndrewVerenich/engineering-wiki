@@ -32,6 +32,8 @@
 
 Compacted topics используют tombstone records для удаления ключа. Cleaner работает асинхронно, поэтому удаление не мгновенное; это важно при построении stateful consumers.
 
+Kafka Streams активно использует compacted internal topics как changelog для state stores, поэтому политика compaction/retention напрямую влияет на скорость восстановления state после failover.
+
 ## Типичные вопросы на интервью
 
 **Q: Почему нельзя бездумно увеличивать partitions у существующего topic?**  
@@ -47,5 +49,6 @@ A: 1) Слишком мало partitions для будущего роста. 2) 
 
 - [Partitioning](partitioning.md)
 - [Kafka Storage and Log Internals](kafka-storage-and-log-internals.md)
+- [Kafka Streams State Stores and Changelog](kafka-streams-state-stores-and-changelog.md)
 - [Kafka In DE Pipelines](kafka-in-de-pipelines.md)
 - [Apache Kafka](../entities/apache-kafka.md)

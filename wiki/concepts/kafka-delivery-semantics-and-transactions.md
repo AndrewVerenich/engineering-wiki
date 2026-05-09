@@ -50,4 +50,5 @@ A: На границе с внешними sink/side effects: Kafka-транза
 - [Transactions and Isolation](transactions-and-isolation.md)
 - [Kafka Producer Internals and Tuning](kafka-producer-internals-and-tuning.md)
 - [Kafka Consumer Internals and Offsets](kafka-consumer-internals-and-offsets.md)
+- [Kafka Streams Exactly-Once](kafka-streams-exactly-once.md)
 - [Kafka Backend Patterns: Outbox, DLQ, Retry](kafka-backend-patterns-outbox-dlq-retry.md)

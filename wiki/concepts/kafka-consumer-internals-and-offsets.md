@@ -54,4 +54,5 @@ A: Он уменьшает stop-the-world эффект при перераспр
 - [Kafka Producer Internals and Tuning](kafka-producer-internals-and-tuning.md)
 - [Kafka Delivery Semantics and Transactions](kafka-delivery-semantics-and-transactions.md)
 - [Kafka Observability and Production Gotchas](kafka-observability-and-production-gotchas.md)
+- [Kafka Streams vs Kafka Consumer](../comparisons/kafka-streams-vs-kafka-consumer.md)
 - [Apache Kafka](../entities/apache-kafka.md)

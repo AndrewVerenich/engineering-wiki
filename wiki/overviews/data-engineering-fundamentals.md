@@ -10,6 +10,7 @@
 - [Stream Processing with Apache Flink](../sources/stream-processing-with-apache-flink.md) — stateful stream processing, event time, windows, watermarks, fault tolerance.
 - [Kafka in Action](../sources/kafka-in-action.md) — устройство Kafka и практики проектирования topic/consumer/producer.
 - [Kafka Official Documentation](../sources/kafka-official-documentation.md) — актуальные internals, KRaft, Connect и operations.
+- [Kafka Streams in Action, Second Edition](../sources/kafka-streams-in-action.md) — app-centric stream processing на JVM: topology, state stores, joins, windows, EOS v2.
 
 > Книги по СУБД и SQL ([PostgreSQL 17 изнутри](../sources/postgresql-internals.md), [SQL: The Complete Reference](../sources/sql-complete-reference.md), [Реляционные базы данных в примерах](../sources/relational-databases-in-examples.md)) перенесены в Foundations — см. ниже.
 
@@ -78,6 +79,22 @@
 - [Kafka Connect Fundamentals](../concepts/kafka-connect-fundamentals.md)
 - [Apache Kafka](../entities/apache-kafka.md)
 - Связанные foundations: [Kafka Storage and Log Internals](../concepts/kafka-storage-and-log-internals.md), [Kafka Replication and ISR](../concepts/kafka-replication-and-isr.md), [Kafka Topic Design and Compaction](../concepts/kafka-topic-design-and-compaction.md), [Kafka Schema Registry and Evolution](../concepts/kafka-schema-registry-and-evolution.md)
+
+### Stream Processing (Kafka Streams)
+
+- [Kafka Streams Architecture](../concepts/kafka-streams-architecture.md)
+- [Kafka Streams: KStream, KTable, GlobalKTable](../concepts/kafka-streams-kstream-and-ktable.md)
+- [Kafka Streams State Stores and Changelog](../concepts/kafka-streams-state-stores-and-changelog.md)
+- [Kafka Streams Joins](../concepts/kafka-streams-joins.md)
+- [Kafka Streams Windowing](../concepts/kafka-streams-windowing.md)
+- [Kafka Streams Time and Stream Time](../concepts/kafka-streams-time-and-streamtime.md)
+- [Kafka Streams Exactly-Once](../concepts/kafka-streams-exactly-once.md)
+- [Kafka Streams Processor API](../concepts/kafka-streams-processor-api.md)
+- [Kafka Streams Testing with TopologyTestDriver](../concepts/kafka-streams-testing-topology-test-driver.md)
+- [Kafka Streams Interactive Queries and Deployment](../concepts/kafka-streams-interactive-queries-and-deployment.md)
+- [Kafka Streams vs Flink](../comparisons/kafka-streams-vs-flink.md)
+- [Kafka Streams vs Kafka Consumer](../comparisons/kafka-streams-vs-kafka-consumer.md)
+- [Kafka Streams](../entities/kafka-streams.md)
 
 ## Связанные foundations (общие с backend)
 

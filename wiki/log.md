@@ -228,3 +228,29 @@
 - Зоны: Foundations + Java Backend + Data Engineering
 
 ---
+
+## [INGEST] Kafka Streams in Action, Second Edition
+
+- Источник:
+  - `wiki/sources/kafka-streams-in-action.md`
+- Новые концепты (Data Engineering / Stream Processing (Kafka Streams)):
+  - `wiki/concepts/kafka-streams-architecture.md`
+  - `wiki/concepts/kafka-streams-kstream-and-ktable.md`
+  - `wiki/concepts/kafka-streams-state-stores-and-changelog.md`
+  - `wiki/concepts/kafka-streams-joins.md`
+  - `wiki/concepts/kafka-streams-windowing.md`
+  - `wiki/concepts/kafka-streams-time-and-streamtime.md`
+  - `wiki/concepts/kafka-streams-exactly-once.md`
+  - `wiki/concepts/kafka-streams-processor-api.md`
+  - `wiki/concepts/kafka-streams-testing-topology-test-driver.md`
+  - `wiki/concepts/kafka-streams-interactive-queries-and-deployment.md`
+- Новые сравнения:
+  - `wiki/comparisons/kafka-streams-vs-flink.md`
+  - `wiki/comparisons/kafka-streams-vs-kafka-consumer.md`
+- Новая сущность:
+  - `wiki/entities/kafka-streams.md`
+- Обновлены агрегаторы: `wiki/index.md`, `wiki/overviews/data-engineering-fundamentals.md`
+- Обновлены cross-links: `wiki/concepts/stream-processing.md`, `wiki/entities/apache-kafka.md`, `wiki/entities/apache-flink.md`, `wiki/concepts/kafka-delivery-semantics-and-transactions.md`, `wiki/concepts/kafka-consumer-internals-and-offsets.md`, `wiki/concepts/kafka-topic-design-and-compaction.md`, `wiki/concepts/redis-pubsub-and-streams.md`
+- Зоны: Data Engineering + Java Backend (cross-links)
+
+---

@@ -52,4 +52,5 @@ A: Keyed state хранится в **key groups** — фиксированное
 - [Flink State Management](../concepts/flink-state-management.md) — keyed/operator/broadcast state, backends.
 - [Flink Checkpoints and Savepoints](../concepts/flink-checkpoints-and-savepoints.md) — fault tolerance.
 - [Flink vs Spark Structured Streaming](../comparisons/flink-vs-spark-structured-streaming.md) — сравнение движков.
+- [Kafka Streams vs Flink](../comparisons/kafka-streams-vs-flink.md) — библиотека в приложении vs отдельный stream engine.
 - [Apache Kafka](apache-kafka.md) — основной транспорт source/sink для Flink.

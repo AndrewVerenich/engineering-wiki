@@ -28,6 +28,7 @@ Wiki разбита на **три зоны**:
 | [Redis Official Documentation](sources/redis-official-documentation.md) | Foundations + Java Backend |
 | [Kafka in Action](sources/kafka-in-action.md) | Foundations + Java Backend + DE |
 | [Kafka Official Documentation](sources/kafka-official-documentation.md) | Foundations + Java Backend + DE |
+| [Kafka Streams in Action, Second Edition](sources/kafka-streams-in-action.md) | DE + Java Backend |
 
 ## Foundations (shared)
 
@@ -120,6 +121,21 @@ Wiki разбита на **три зоны**:
 - [Flink ProcessFunction](concepts/flink-process-function.md)
 - [Flink vs Spark Structured Streaming](comparisons/flink-vs-spark-structured-streaming.md)
 
+### Stream Processing (Kafka Streams)
+
+- [Kafka Streams Architecture](concepts/kafka-streams-architecture.md)
+- [Kafka Streams: KStream, KTable, GlobalKTable](concepts/kafka-streams-kstream-and-ktable.md)
+- [Kafka Streams State Stores and Changelog](concepts/kafka-streams-state-stores-and-changelog.md)
+- [Kafka Streams Joins](concepts/kafka-streams-joins.md)
+- [Kafka Streams Windowing](concepts/kafka-streams-windowing.md)
+- [Kafka Streams Time and Stream Time](concepts/kafka-streams-time-and-streamtime.md)
+- [Kafka Streams Exactly-Once](concepts/kafka-streams-exactly-once.md)
+- [Kafka Streams Processor API](concepts/kafka-streams-processor-api.md)
+- [Kafka Streams Testing with TopologyTestDriver](concepts/kafka-streams-testing-topology-test-driver.md)
+- [Kafka Streams Interactive Queries and Deployment](concepts/kafka-streams-interactive-queries-and-deployment.md)
+- [Kafka Streams vs Flink](comparisons/kafka-streams-vs-flink.md)
+- [Kafka Streams vs Kafka Consumer](comparisons/kafka-streams-vs-kafka-consumer.md)
+
 ### Apache Kafka
 
 - [Kafka in DE Pipelines](concepts/kafka-in-de-pipelines.md)
@@ -176,6 +192,7 @@ Wiki разбита на **три зоны**:
 - [Apache Kafka](entities/apache-kafka.md) — Foundations / Java Backend / DE
 - [Apache Flink](entities/apache-flink.md) — DE
 - [Redis](entities/redis.md) — Foundations / Java Backend
+- [Kafka Streams](entities/kafka-streams.md) — DE / Java Backend
 
 ## Overviews
 
