@@ -1,5 +1,29 @@
 # Log
 
+## [REFACTOR] Добавлены System Design, Patterns, SQL Practice, Backlog
+
+- **Новая зона:** System Design (4-я, параллельно Foundations / DE / Java Backend).
+- **Новые горизонтальные каталоги:**
+  - Patterns — `wiki/patterns/` — каталог архитектурных и интеграционных паттернов (cross-zone).
+  - SQL Practice — `wiki/sql-practice/` — раздел прикладных SQL-задач.
+- **Новый файл:** `wiki/backlog.md` — reading & ingest backlog по зонам и каталогам с приоритетами.
+- **Создано:**
+  - `wiki/system-design/README.md` — landing зоны: зачем, шаблон case-страницы, список планируемых кейсов.
+  - `wiki/patterns/README.md` — landing каталога: концепт vs паттерн, категории, шаблон.
+  - `wiki/sql-practice/README.md` — landing раздела: категории, сложность, шаблон задачи.
+  - `wiki/overviews/system-design-fundamentals.md` — overview методологии собеседования (stub, наполняется).
+  - `wiki/overviews/patterns-catalog.md` — overview порядка изучения паттернов (stub).
+  - `wiki/overviews/sql-practice-roadmap.md` — overview порядка изучения SQL-задач (stub).
+  - `wiki/backlog.md` — расписан backlog по разделам Java Backend / DE / Foundations / System Design / Patterns / SQL Practice.
+- **Обновлены правила вики:**
+  - `schema/SCHEMA.md` — модель расширена с трёх до четырёх зон; добавлены типы страниц 2.6 Pattern, 2.7 System Design, 2.8 SQL Practice, 2.9 Backlog; обновлён зональный маршрутизатор; правила ingest и lint расширены под новые типы.
+  - `.cursor/skills/engineering-wiki/SKILL.md` — обновлены Wiki Zones, File Structure, шаблоны pattern/system-design/sql-practice page, Ingest Workflow и Index Structure под новую модель; добавлен принцип определения **типа** страницы рядом с принципом определения зоны; добавлены lint-проверки page type integrity и backlog ↔ log синхронизации.
+  - `wiki/index.md` — добавлены секции `## System Design`, `## Patterns`, `## SQL Practice`, `## Backlog`; в `## Domains (overviews)` и `## Overviews` добавлены ссылки на новые overview-страницы; обновлён вступительный блок (4 зоны + 2 каталога).
+- **Содержание новых разделов:** не наполнено (TBD-плейсхолдеры). Контент будет добавляться постепенно по мере чтения источников из backlog.
+- **Зоны/каталоги затронутые:** все четыре зоны (структурное обновление) + два новых каталога.
+
+---
+
 ## [INIT] Wiki created
 
 ---

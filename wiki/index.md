@@ -1,17 +1,28 @@
 # Index
 
-Wiki разбита на **три зоны**:
+Wiki разбита на **четыре зоны** и **два горизонтальных каталога**:
+
+**Зоны:**
 
 - **Foundations** — нужно и Java backend-инженеру, и data engineer'у: распределённые системы, транзакции, SQL, реляционное моделирование.
 - **Data Engineering** — DWH, batch/stream, моделирование витрин, инструменты данных.
 - **Java Backend** — JVM, Spring, Kotlin, concurrency, web/API (раздел в стадии наполнения).
+- **System Design** — архитектурные кейсы и методология собеседований senior-уровня (раздел только заведён).
 
-Дублирование ссылок не делаем: каждая страница лежит в одной зоне; cross-links живут внутри страниц в секции «Связи».
+**Горизонтальные каталоги (cross-zone):**
+
+- **Patterns** — каталог архитектурных и интеграционных паттернов (outbox, saga, idempotency, circuit breaker и т. д.).
+- **SQL Practice** — раздел практических SQL-задач для интервью.
+
+Дублирование ссылок не делаем: каждая страница лежит в одной секции; cross-links живут внутри страниц в секции «Связи».
 
 ## Domains (overviews)
 
 - [Java Backend Fundamentals](overviews/java-backend-fundamentals.md)
 - [Data Engineering Fundamentals](overviews/data-engineering-fundamentals.md)
+- [System Design Fundamentals](overviews/system-design-fundamentals.md)
+- [Patterns Catalog Overview](overviews/patterns-catalog.md)
+- [SQL Practice Roadmap](overviews/sql-practice-roadmap.md)
 
 ## Sources
 
@@ -186,6 +197,112 @@ Wiki разбита на **три зоны**:
 
 - (TBD) metrics, tracing, logging (Micrometer, OpenTelemetry).
 
+## System Design
+
+Зона `System Design` — отдельная от доменных. Здесь живут framework собеседования и разборы кейсов. Подробнее — [`system-design/README.md`](system-design/README.md), методология — [System Design Fundamentals](overviews/system-design-fundamentals.md).
+
+### Framework & methodology
+
+- [System Design Fundamentals](overviews/system-design-fundamentals.md) — каркас раздела.
+
+### Cases
+
+- (TBD) URL Shortener
+- (TBD) Rate Limiter (token bucket / leaky bucket / sliding window)
+- (TBD) Distributed Cache
+- (TBD) Notification System
+- (TBD) News Feed / Timeline
+- (TBD) Payment System (idempotency, double-spend, eventual consistency)
+- (TBD) Real-time Analytics Dashboard (Kafka → Flink → ClickHouse)
+- (TBD) CDC Replication Pipeline (Postgres → Kafka → DWH)
+- (TBD) Chat / Messaging
+- (TBD) Search Autocomplete (typeahead)
+- (TBD) Distributed Job Scheduler
+
+См. полный план кейсов: [backlog.md](backlog.md) → System Design.
+
+## Patterns
+
+Cross-zone каталог архитектурных и интеграционных паттернов. Зона указывается на самой странице. Подробнее — [`patterns/README.md`](patterns/README.md), обзор — [Patterns Catalog Overview](overviews/patterns-catalog.md).
+
+### Reliability & messaging
+
+- (TBD) Outbox / Transactional messaging
+- (TBD) Idempotency keys
+- (TBD) Retry with exponential backoff + jitter
+- (TBD) Dead-letter queue strategies
+
+### Distributed transactions
+
+- (TBD) Saga (orchestration vs choreography)
+- (TBD) Compensating actions
+
+### Resilience
+
+- (TBD) Circuit breaker
+- (TBD) Bulkhead
+- (TBD) Timeout & deadline propagation
+
+### Consistency & state
+
+- (TBD) Optimistic locking
+- (TBD) Pessimistic locking
+- (TBD) CQRS
+- (TBD) Event sourcing
+
+### Scalability
+
+- (TBD) Distributed ID generation (Snowflake, UUIDv7)
+- (TBD) Sharding strategies
+- (TBD) Leader election
+- (TBD) Rate limiting algorithms
+
+### Architecture / migration
+
+- (TBD) Strangler fig
+- (TBD) Anti-corruption layer
+- (TBD) BFF (backend-for-frontend)
+
+См. полный план паттернов: [backlog.md](backlog.md) → Patterns.
+
+## SQL Practice
+
+Раздел практических SQL-задач для интервью. Подробнее — [`sql-practice/README.md`](sql-practice/README.md), порядок изучения — [SQL Practice Roadmap](overviews/sql-practice-roadmap.md).
+
+### Joins & aggregations
+
+- (TBD) задачи на join'ы и group by
+
+### Window functions
+
+- (TBD) Top-N per group (window vs LATERAL vs DISTINCT ON)
+- (TBD) Running totals, moving averages
+- (TBD) LAG/LEAD задачи
+
+### Analytics
+
+- (TBD) Sessionization (gaps & islands)
+- (TBD) Retention cohort matrix
+- (TBD) Funnel из event-stream
+- (TBD) Detect overlapping intervals
+
+### Recursive CTE & hierarchies
+
+- (TBD) Recursive org chart traversal
+- (TBD) Category tree with depth
+
+### Schema design & DDL
+
+- (TBD) Schema design tasks
+- (TBD) SCD Type 2 SQL implementation
+
+### Performance & EXPLAIN
+
+- (TBD) Анализ медленного запроса → переписать
+- (TBD) Какой индекс закроет запрос
+
+См. полный план задач: [backlog.md](backlog.md) → SQL Practice.
+
 ## Entities
 
 - [PostgreSQL](entities/postgresql.md) — Foundations / DE
@@ -198,6 +315,13 @@ Wiki разбита на **три зоны**:
 
 - [Java Backend Fundamentals](overviews/java-backend-fundamentals.md)
 - [Data Engineering Fundamentals](overviews/data-engineering-fundamentals.md)
+- [System Design Fundamentals](overviews/system-design-fundamentals.md)
+- [Patterns Catalog Overview](overviews/patterns-catalog.md)
+- [SQL Practice Roadmap](overviews/sql-practice-roadmap.md)
 - [Dimensional Modeling Interview Prep](overviews/dimensional-modeling-interview-prep.md)
 - [dbt Learning Roadmap](overviews/dbt-learning-roadmap.md)
 - [ClickHouse Learning Track (dbt-oriented)](overviews/clickhouse-learning-track.md)
+
+## Backlog
+
+- [Reading & Ingest Backlog](backlog.md) — план будущих источников и тем по зонам/каталогам.
